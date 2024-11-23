@@ -7,11 +7,10 @@ module m_n
 
 contains
 
-    subroutine sN(N)
-        integer(kind=i4) :: N
+    subroutine sN(N) !Sub rotina para escolher o número de partições que o intervalo será dividido.
+        integer(kind=i4) :: N !Define a variável do número de partições.
 
-        write(*,*) "Qual o número de partições que o intervalo será dividido?"
-        read(*,*) N
+        write(*,*) "Qual o número de partições que o intervalo será dividido?" !Faz a pergunta ao usuário.
+        read(*,*) N !Lê a variável
     end subroutine
-
 end module m_n

@@ -7,10 +7,10 @@ module m_funcao
 
 contains
 
-    function f(x) result(y)
-        real(kind=sp), intent(in) :: x
-        real(kind=sp) :: y
+    function f(x) result(y) !Define a função que será integrada
+        real(kind=sp), intent(in) :: x !Define a variável x, o argumento da função
+        real(kind=sp) :: y !Define a variável y, resultado da função
 
-        y = sin(x)
+        y = sin(x) !Aplica a função na variável x
     end function f
 end module m_funcao
