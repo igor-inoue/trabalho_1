@@ -25,7 +25,7 @@ program main
   write(*,'(a, f0.2, a, f0.2)') "A integral do seno de x variando de ", a, " até ", b, " é:"
   write(*,*) r
 
-  write(*,*) "O tempo utilizado para calculá-la utilizando", N, " partições", "foi:"
+  write(*,'(a, i0, a)') "O tempo utilizado para calculá-la utilizando ", N, " partições foi:"
   write(*,*) cronometro%t_tot, " segundos"
 
 end program main
