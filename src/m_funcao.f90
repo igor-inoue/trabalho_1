@@ -1,15 +1,9 @@
-program check
+module m_funcao
     use, intrinsic :: iso_fortran_env, only: sp => real32, dp => real64, i4 => int32, i8 => int64
     implicit none
+    private
 
-    real(kind=sp) :: x, y
-
-    write(*,*) "Insira um valor de x"
-    read(*,*) x
-
-    y = f(x)
-
-    write(*,*) "sen(x) =", y
+    public :: f
 
 contains
 
@@ -19,4 +13,4 @@ contains
 
         y = sin(x)
     end function f
-end program check
+end module
