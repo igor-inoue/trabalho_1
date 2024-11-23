@@ -1,13 +1,9 @@
-program check
+module m_limites
     use, intrinsic :: iso_fortran_env, only: sp => real32, dp => real64, i4 => int32, i8 => int64
     implicit none
+    private
 
-    real(kind=sp) :: a, b
-
-    call limites(a,b)
-
-    write(*,*) "Os limites são:"
-    write(*,*) a, b
+    public :: limites
 
 contains
     subroutine limites(a,b)
@@ -25,4 +21,4 @@ contains
             write(*,*) "O limite superior deve ser maior que o inferior!"
         end do
     end subroutine
-end program check
+end module
