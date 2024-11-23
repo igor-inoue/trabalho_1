@@ -22,7 +22,7 @@ program main
 
   call cronometro%toc()
 
-  write(*,'(a, f0.2, a, f0.2)') "A integral do seno de x variando de ", a, " até ", b, " é:"
+  write(*,'(a, f0.2, a, f0.2)') "A integral da gaussiana de x variando de ", a, " até ", b, " é:"
   write(*,*) r
 
   write(*,'(a, i0, a)') "O tempo utilizado para calculá-la utilizando ", N, " partições foi:"
