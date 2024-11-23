@@ -7,15 +7,15 @@ module m_funcao
 
 contains
 
-    function f(x) result(y)
-        real(kind=sp), intent(in) :: x
-        real(kind=sp) :: y
-        real(kind=sp) :: pi, sigma, mu
+    function f(x) result(y) !Define a função que será integrada.
+        real(kind=sp), intent(in) :: x !Define a variável x, o argumento da função.
+        real(kind=sp) :: y !Define a variável y, resultado da função.
+        real(kind=sp) :: pi, sigma, mu !Define as constantes da função.
 
         pi = 2 * asin(1.0)
         sigma = 1.0
         mu = 0.0
 
-        y = 1 / (sigma * sqrt(2 * pi)) * exp(-0.5 * ((x - mu) / sigma) ** 2)
+        y = sin(x) !Aplica a função na variável x.
     end function f
 end module m_funcao
