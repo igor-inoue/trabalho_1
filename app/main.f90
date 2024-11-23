@@ -1,11 +1,11 @@
 program main
   use m_integral
+  use m_limites
   use, intrinsic :: iso_fortran_env, only: sp => real32, dp => real64, i4 => int32, i8 => int64
   implicit none
   real(kind=sp) :: a, b, r
 
-  a = 1.0
-  b = 3.0
+  call limites(a,b)
 
   r = integral(a,b)
 
