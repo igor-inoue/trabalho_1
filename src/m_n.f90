@@ -1,4 +1,4 @@
-module m_funcao
+module m_n
     use, intrinsic :: iso_fortran_env, only: sp => real32, dp => real64, i4 => int32, i8 => int64
     implicit none
     private
@@ -14,4 +14,4 @@ contains
         read(*,*) N
     end subroutine
 
-end module
+end module m_n

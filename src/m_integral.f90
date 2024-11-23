@@ -8,13 +8,12 @@ module m_integral
 
 contains
 
-    function integral(a,b) result(r)
+    function integral(a,b,N) result(r)
         real(kind=sp), intent(in) :: a, b
         real(kind=sp) :: r
         real(kind=sp) :: step, ap, bp, termo
-        integer(kind=i4) :: N, i
-
-        N = 100
+        integer(kind=i4), intent(in) :: N
+        integer(kind=i4) :: i
 
         step = (b - a) / N
 
@@ -28,5 +27,5 @@ contains
 
             r = r + termo
         end do
-    end function
-end module
+    end function integral
+end module m_integral

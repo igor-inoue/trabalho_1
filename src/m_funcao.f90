@@ -13,4 +13,4 @@ contains
 
         y = sin(x)
     end function f
-end module
+end module m_funcao

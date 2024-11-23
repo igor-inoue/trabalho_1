@@ -1,4 +1,5 @@
 program main
+  use m_N
   use m_integral
   use m_limites
   use mod_tictoc
@@ -6,22 +7,25 @@ program main
   implicit none
 
   real(kind=sp) :: a, b, r
+  integer(kind=i4) :: N
 
   type(tictoc) :: cronometro
 
   call limites(a,b)
 
+  call sN(N)
+
   call cronometro%reset()
   call cronometro%tic()
 
-  r = integral(a,b)
+  r = integral(a,b,N)
 
   call cronometro%toc()
 
-  write(*,'(a, f4.2, a, f4.2)') "A integral do seno de x variando de ", a, " até ", b, " é:"
+  write(*,'(a, f0.2, a, f0.2)') "A integral do seno de x variando de ", a, " até ", b, " é:"
   write(*,*) r
 
-  write(*,*) "O tempo utilizado para calculá-la utilizando 100 partições", "foi:"
+  write(*,*) "O tempo utilizado para calculá-la utilizando", N, " partições", "foi:"
   write(*,*) cronometro%t_tot, " segundos"
 
 end program main

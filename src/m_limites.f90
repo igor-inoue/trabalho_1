@@ -20,5 +20,5 @@ contains
             end if
             write(*,*) "O limite superior deve ser maior que o inferior!"
         end do
-    end subroutine
-end module
+    end subroutine limites
+end module m_limites
