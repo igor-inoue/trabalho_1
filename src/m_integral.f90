@@ -1,16 +1,10 @@
-program check
+module m_integral
+    use m_funcao
     use, intrinsic :: iso_fortran_env, only: sp => real32, dp => real64, i4 => int32, i8 => int64
     implicit none
+    private
 
-    real(kind=sp) :: a, b, r
-
-    a = 1
-    b = 2
-
-    r = integral(a,b)
-
-    write(*,*) "A integral do seno de x variando de", a, "até", b, "é:"
-    write(*,*) r
+    public :: integral
 
 contains
 
@@ -30,9 +24,9 @@ contains
             ap = a + step * (i - 1)
             bp = a + step * i
 
-            termo = (bp - ap) / 6 * (sin(ap) + 4 * sin((ap + bp) / 2) + sin(bp))
+            termo = (bp - ap) / 6 * (f(ap) + 4 * f((ap + bp) / 2) + f(bp))
 
             r = r + termo
         end do
     end function
-end program check
+end module
