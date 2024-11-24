@@ -11,11 +11,10 @@ auto-examples = true
 module-naming = false
 [install]
 library = false
-test = false
 [fortran]
 implicit-typing = false
 implicit-external = false
 source-form = "free"
 [dependencies]
-tictoc-fortran.git = "https://github.com/wcota/tictoc-fortran"
+   tictoc-fortran.git = "https://github.com/wcota/tictoc-fortran"
 
